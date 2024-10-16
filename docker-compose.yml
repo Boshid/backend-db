@@ -1,0 +1,22 @@
+services:
+  db:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: backend-db
+    ports:
+      - 5432:5432
+    env_file:
+      - .env
+    restart: unless-stopped
+    networks:
+      - backend-net
+#    volumes:
+#      - /infra/db/volumes/postgres:/docker-entrypoint-initdb.d
+
+#volumes:
+#  db:
+#    name: backend-db-volume
+
+networks:
+  backend-net:
