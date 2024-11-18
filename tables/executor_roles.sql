@@ -11,7 +11,7 @@ begin
     raise exception 'role_id % does not exist in roles', new.role_id;
   end if;
 
-  if not exists (select 1 from executor where id = new.executor_id) then
+  if not exists (select 1 from task_executors where id = new.executor_id) then
     raise exception 'executor_id % does not exist in executor', new.executor_id;
   end if;
 

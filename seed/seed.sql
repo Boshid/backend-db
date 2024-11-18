@@ -13,12 +13,12 @@ insert into roles(name, function_id, field_id) values
 ('maintainer', 2, 2),
 ('reporter', 3, 3);
 
-insert into data(id) values
+insert into task(id) values
 (1),
 (2),
 (3);
 
-insert into additional(data_id, field1, field2, field3) values
+insert into duration(task_id, field1, field2, field3) values
 (1, 'ceo', 'cto', 'cfo'),
 (2, 'pm', 'sdm', 'teamlead'),
 (3, 'backend-developer', 'frontend-developer', 'software tester');
@@ -33,7 +33,7 @@ insert into employees(person_id, role_id) values
 (2, 2),
 (3, 3);
 
-insert into executor(name, additional_id, role_id, employee_id) values
+insert into task_executors(name, duration_id, role_id, employee_id) values
 ('executor1', 1, 1, 1),
 ('executor2', 2, 2, 2),
 ('executor3', 3, 3, 3);

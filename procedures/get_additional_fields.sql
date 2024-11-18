@@ -1,4 +1,4 @@
-create or replace function get_additional_fields(session_id_val int8, employee_id_value int8)
+create or replace function get_duration_fields(employee_id_value int8)
 returns table (
     id int8,
     name varchar

@@ -1,4 +1,4 @@
-create or replace procedure close_session(session_id_val int8, person_id_val int8, device_id_val text)
+create or replace procedure close_session(person_id_val int8, device_id_val text)
 language sql
 begin atomic
     update session set

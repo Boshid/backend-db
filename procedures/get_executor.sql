@@ -1,7 +1,7 @@
-create or replace function get_executor(session_id_val int8, id_value int8)
-returns setof executor
+create or replace function get_task_executors(id_value int8)
+returns setof task_executors
 language sql
 begin atomic
-    select * from executor ex
+    select * from task_executors ex
     where ex.id = id_value;
 end;

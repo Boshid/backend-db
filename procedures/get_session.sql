@@ -1,4 +1,4 @@
-create or replace function get_session(session_id_val int8, person_id_val int8, device_id_val text)
+create or replace function get_session(person_id_val int8, device_id_val text)
 returns setof session
 language sql
 begin atomic
